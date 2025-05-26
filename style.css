@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #dceeff, #ffffff);
+}
+
+header {
+  background: #0077c2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input, select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input:focus, select:focus {
+  border-color: #0077c2;
+  outline: none;
+}
+
+.materiais {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.materiais label {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.materiais label:hover {
+  transform: scale(1.05);
+}
+
+.materiais img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: white;
+  background: #0077c2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005f99;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f2f2f2;
+  font-size: 0.9rem;
+}

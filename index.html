@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento de Materiais</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #dceeff, #ffffff);
+    }
+    header {
+      background: #0077c2;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .logo {
+      max-width: 200px;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    input, select {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input:focus, select:focus {
+      border-color: #0077c2;
+      outline: none;
+    }
+    .materiais {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .materiais label {
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .materiais label:hover {
+      transform: scale(1.05);
+    }
+    .materiais img {
+      width: 60px;
+      height: 60px;
+      display: block;
+    }
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      color: white;
+      background: #0077c2;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005f99;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f2f2f2;
+      font-size: 0.9rem;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('agendamentoForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Agendamento adicionado com sucesso (simulado).');
+        form.reset();
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Prefeitura de Uberlândia" class="logo" />
+    <h1>ADICIONAR AGENDAMENTO</h1>
+  </header>
+  <main>
+    <form id="agendamentoForm">
+      <div class="form-grid">
+        <input type="text" placeholder="Nome Completo" required />
+        <input type="text" placeholder="Matrícula" required />
+        <input type="text" placeholder="Setor" required />
+        <select required>
+          <option value="">Qual é a sua diretoria?</option>
+          <option value="comunicacao">Assessoria de Comunicação e Imprensa</option>
+          <option value="ti">Tecnologia da Informação</option>
+        </select>
+        <input type="text" placeholder="Ramal" required />
+        <input type="text" placeholder="Local da Reunião" required />
+        <input type="date" required />
+        <select required>
+          <option>07:30</option>
+          <option>08:00</option>
+          <option>08:30</option>
+        </select>
+        <select required>
+          <option>08:00</option>
+          <option>08:30</option>
+          <option>09:00</option>
+        </select>
+      </div>
+
+      <div class="materiais">
+        <label><input type="checkbox" name="material" value="caixa-som" /> <img src="som.png" alt="Caixa de som" /></label>
+        <label><input type="checkbox" name="material" value="microfone" /> <img src="microfone.png" alt="Microfone" /></label>
+        <label><input type="checkbox" name="material" value="notebook" /> <img src="notebook.png" alt="Notebook" /></label>
+        <label><input type="checkbox" name="material" value="cabos" /> <img src="cabos.png" alt="Cabos" /></label>
+        <label><input type="checkbox" name="material" value="projetor" /> <img src="projetor.png" alt="Projetor" /></label>
+      </div>
+
+      <button type="submit">Adicionar Agendamento</button>
+    </form>
+  </main>
+  <footer>
+    <p>DMAE © Desenvolvido no Núcleo de Tecnologia e Informação</p>
+  </footer>
+</body>
+</html>
